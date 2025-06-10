@@ -31,4 +31,23 @@ public abstract class Character {
 		m.hp -= dmg;
 		System.out.println(m.name +"に"+ dmg +"ダメージ");
 	}
+	
+	public void move(Board board) {
+		char ch = Util.choice("WASD >");
+		
+		switch (ch) {
+		case 'W' -> {
+			this.y = Math.max(y-1,0);
+		}
+		case 'A'->{
+			this.x = Math.max(x-1, 0);
+		}
+		case 'S'->{
+			this.y= Math.min(y+1, board.ysize);
+		}
+		case 'D'->{
+			this.x= Math.min(x+1, board.xsize);
+		}
+		}
+	}
 }
