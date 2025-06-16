@@ -6,7 +6,7 @@ public class Slime extends Monster {
 		super(name, suffix);
 	}
 	public Slime() {
-		this("スライム", 's');
+		super("スライム", 's');
 	}
 
 }

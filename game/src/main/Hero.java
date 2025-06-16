@@ -1,12 +1,12 @@
 package main;
 
-public class Hero extends Character{
+public class Hero extends Character {
 
-	public Hero(String name) {
-		super(name);		
+	public Hero(String name, char suffix) {
+		super(name, suffix);
 	}
-
 	public Hero() {
-		super("勇者");
+		this("勇者", '@');
 	}
+
 }
